@@ -41,7 +41,7 @@
 import { nextTick } from 'vue'
 import { mapActions, mapState } from 'vuex'
 import Web3 from 'web3'
-import Web3Wallet from '@/components/web3/wallet'
+import Web3Wallet from '@/support/web3/wallet'
 
 export default {
   name: 'Head',

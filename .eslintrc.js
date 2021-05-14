@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'no-use-before-define': 'off',
     'react/prop-types': 'off',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'no-unused-vars': 'off'
   }
 }

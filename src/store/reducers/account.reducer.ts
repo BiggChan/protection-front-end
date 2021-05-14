@@ -1,45 +1,30 @@
-import { SIGNIN, AuthUnionType, SIGNIN_SUCCESS, SIGNIN_FAIL } from '../actions/account.actions'
+import { ACCOUNT, ChainUnionType } from '../actions/account.actions'
 
-export interface AuthState {
-  loaded: boolean,
-  success: boolean,
-  message: string,
-  balance: number,
-  balanceString: string,
-  address: string | null,
-  identifier: string
+export interface AccountState {
+    balance: number
+    balanceString: string
+    address: string | null
+    identifier: string
 }
-const intialState: AuthState = {
-  loaded: false,
-  success: false,
-  message: '',
+const intialState: AccountState = {
   balance: 0,
   balanceString: '0',
   address: null,
   identifier: ''
 }
 
-export default function accountReducer(state = intialState, action: AuthUnionType) {
+export default function AccountReducer(
+  state = intialState,
+  action: ChainUnionType
+) {
   switch (action.type) {
-    case SIGNIN:
+    case ACCOUNT:
       return {
         ...state,
-        loaded: false,
-        success: false
-      }
-    case SIGNIN_SUCCESS:
-      return {
-        ...state,
-        loaded: true,
-        success: true,
-        ...action.payload
-      }
-    case SIGNIN_FAIL:
-      return {
-        ...state,
-        loaded: true,
-        success: false,
-        message: action.message
+        balance: action.payload.balance,
+        balanceString: action.payload.balanceString,
+        address: action.payload.address,
+        identifier: action.payload.identifier
       }
     default:
       return state

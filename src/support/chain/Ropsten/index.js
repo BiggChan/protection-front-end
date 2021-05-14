@@ -1,5 +1,5 @@
 import tokens from './tokens.js'
-import icon from '@/assets/icons/network.svg'
+import icon from '../../../assets/icons/network.svg'
 
 export default {
   name: 'Ropsten',

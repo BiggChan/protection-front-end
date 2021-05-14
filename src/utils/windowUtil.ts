@@ -1,9 +1,5 @@
 
-export const wEthereum = () => {
-  // @ts-ignore
-  return window.ethereum
-}
-export const Wweb3 = () => {
-  // @ts-ignore
-  return window.web3
-}
+// @ts-ignore
+export const wEthereum = window.ethereum
+// @ts-ignore
+export const Wweb3 = window.web3

@@ -1,7 +1,7 @@
 import Web3 from 'web3'
-import { getBufferFromHex } from '@/utils/hexUtil'
+import { getBufferFromHex } from '../../../utils/hexUtil'
 import errorHandler from './errorHandler'
-import { WEB3_WALLET } from '@/constant'
+import { WEB3_WALLET } from '../../../constant'
 import { bufferToHex } from 'ethereumjs-util'
 
 class Web3Wallet {

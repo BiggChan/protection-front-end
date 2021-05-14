@@ -10,3 +10,5 @@ export const SetWeb3 = (
   type: WEB3,
   web3
 })
+
+export type Web3UnionType = | SetWeb3Action

@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import BancorLiquidityPool from './components/core/BancorLiquidityPool'
-import Swap from './components/core/Swap'
+import BancorLiquidityPool from './pages/BancorLiquidityPool/index'
+import Swap from './pages/Swap/index'
 
 const Routes = () => {
   return (

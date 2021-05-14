@@ -1,9 +1,11 @@
 import React from 'react'
-import Layout from './Layout'
+import Layout from '../../components/core/Layout'
 
 const BancorLiquidityPool = () => {
   return (
-    <Layout><p>你好</p></Layout>
+    <Layout>
+      你们好
+    </Layout>
   )
 }
 

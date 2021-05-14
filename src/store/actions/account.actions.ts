@@ -1,34 +1,20 @@
-export const SIGNIN = 'SIGNIN'
-export const SIGNIN_SUCCESS = 'SIGNIN_SUCCESS'
-export const SIGNIN_FAIL = 'SIGNIN_FAIL'
+export const ACCOUNT = 'Account'
 
-export interface SigninAction {
-  type: typeof SIGNIN
-  payload: any
+export interface Accountload{
+  address:string,
+  identifier:string,
+  balanceString: string,
+  balance:number
 }
-export interface SigninSuccessAction {
-  type: typeof SIGNIN_SUCCESS
-  payload: any
+export interface SetAccountAction {
+  type: typeof ACCOUNT,
+  payload:Accountload
 }
-export interface SigninFailAction {
-  type: typeof SIGNIN_FAIL
-  message: string
-}
-
-export const signin = (
-  payload: any
-): SigninAction => ({
-  type: SIGNIN,
-  payload
-})
-export const signinSuccess = (payload: any): SigninSuccessAction => ({
-  type: SIGNIN_SUCCESS,
+export const SetAccount = (
+  payload:Accountload
+): SetAccountAction => ({
+  type: ACCOUNT,
   payload
 })
 
-export const signinFail = (message: string): SigninFailAction => ({
-  type: SIGNIN_FAIL,
-  message
-})
-
-export type AuthUnionType = SigninAction | SigninSuccessAction | SigninFailAction
+export type ChainUnionType = | SetAccountAction
